@@ -1,16 +1,16 @@
 config:
-  target: "http://13.52.103.13:3000"
+  target: "http://54.241.53.138"
   phases:
-    - duration: 180
-      arrivalRate: 100
-  variables:
-    productIds:
-      - ["soluta", "delectus", 'ducimus', 'similique', 'illo', 'animi', 'inventore', 'Running']
+    - duration: 300
+      arrivalRate: 175
+  # variables:
+  #   productIds:
+  #     - ["consequuntur", "maiores"]
 scenarios:
   - flow:
-      - loop:
+      # - loop:
           - get:
-              url: "/search/{{ $loopElement }}"
-              # url: "/search/eligendi"
-        over: productIds
+              # url: "/search/{{ $loopElement }}"
+              url: "/search/deserunt"
+        # over: productIds
 
